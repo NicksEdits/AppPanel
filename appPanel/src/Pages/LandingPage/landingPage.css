@@ -1,0 +1,67 @@
+.landingpage {
+    background: url(../../assets/quartierBastille@2x.png)no-repeat bottom left;
+    background-size: 70%;
+    background-position: 100% 100%;
+}
+
+.img-app {
+    justify-content: center;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.img-app img {
+    padding: 20% 5%;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.container-info {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ece4d1;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+
+.container-info .info {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.container-info label {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 700px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+.container-info input {
+    width: 100%;
+    margin-left: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.container-info button {
+    width: 30%;
+    margin-left: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #d60303;
+    color: white;
+}
+
+.home-page h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.lp-english {
+    font-style: italic;
+    color: #B60000;
+}
