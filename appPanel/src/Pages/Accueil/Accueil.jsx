@@ -263,22 +263,6 @@ const Accueil = () => {
                             <div className='block md:flex justify-between'>
 
                                 <div className='card-i'>
-                                    <div className='col '>
-                                        <div className='card-item-bul'>
-                                            <h5 >
-                                                Titre d'acualtié sur une ou deux lignes, soyons bref !
-                                            </h5>
-                                            <span className='  text-[10px]'>
-                                                Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet
-                                            </span>
-                                            <span className=' uppercase text-[10px]'>
-                                                publié le 6 mai 2020
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className='card-i'>
                                     <div className='col'>
                                         <div className='card-item-bul'>
                                             <h5 >
@@ -309,24 +293,40 @@ const Accueil = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className=''>
+
+                                <div className='card-i'>
+                                    <div className='col'>
+                                        <div className='card-item-bul'>
+                                            <h5 >
+                                                Titre d'acualtié sur une ou deux lignes, soyons bref !
+                                            </h5>
+                                            <span className='  text-[10px]'>
+                                                Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet Loreum ipsum dolor sit amet
+                                            </span>
+                                            <span className=' uppercase text-[10px]'>
+                                                publié le 6 mai 2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                            <div className=''>
                                     <a href="#" className=' flex md:hidden py-6 text-rouge_fonce text-[12px]'>
                                         Voir toute l'actualité <HiOutlineArrowNarrowRight size={20} className=' flex' />
                                     </a>
                                 </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            {/* <Footer /> */}
-            <div className='social'>
+            <Footer />
+            <div className='social hidden md:flex'>
                 <img src={imgsocial} loading="lazy" alt='Parcours révolution' />
                 <div className='separ'></div>
                 <a href='#'><BiLogoFacebook size={20} /></a>
-
                 <a href='#'><AiFillYoutube size={20} /></a>
                 <a href='#'><AiOutlineInstagram size={20} /></a>
             </div>

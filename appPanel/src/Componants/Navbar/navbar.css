@@ -13,6 +13,14 @@
     margin-bottom: 10px;
     background-color: #002542;
 }
+.separatormob {
+    width: 2px;
+    height: 30px;
+    margin: 0 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
 
 @media screen and (min-width:1100px) {
     .header {
@@ -32,7 +40,12 @@
     min-width: 40px;
     height: 40px;
 }
-
+.logonav{
+    position: absolute;
+    display: flex;
+    top: 93%;
+    color: white;
+}
 .anvanimob {
     position: absolute;
     top: -100%;
@@ -40,14 +53,28 @@
     background-color: transparent !important;
     /* z-index: 2; */
 }
-
+.dl-spp{
+    /* padding: 100px 40px; */
+    padding-left: 30px;
+    margin: 20px 10px;
+}
+.dl-ap img{
+    width: 100px;
+}
+.dl-spp img{
+    width:250px;
+    padding: 10px 10px;
+    /* max-height: 50px; */
+  }
 .anvanimmob {
     transition: 1s cubic-bezier(0.76, 0, 0.24, 1) 0s;
     position: absolute;
-    top: 9%;
-    height: 91%;
+    top: 60px;
+    height: 94%;
     color: white !important;
     z-index: 4;
+    background: url(../../assets/bottom-left-orange-diagonal.svg) no-repeat bottom;
+    background-position: 80% 100%;
     background-color:#fff !important;
 }
 

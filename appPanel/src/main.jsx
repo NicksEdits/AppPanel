@@ -10,7 +10,7 @@ import Accueil from './Pages/Accueil/Accueil.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/*",
     element: <LandingPage />,
   },
   {

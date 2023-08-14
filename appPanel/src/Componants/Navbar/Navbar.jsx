@@ -3,13 +3,19 @@ import logo1 from "../../assets/logo-parcours-revolution.png"
 import logo2 from "../../assets/logo-paris.svg"
 import logo3 from "../../assets/logo-paris-white.svg";
 import logo4 from "../../assets/logo-parcours-revolution-white.svg";
-import img1 from  "../../assets/icon-pin.svg"
-import img2 from  "../../assets/icon-phrygian-cap.svg"
-import img3 from  "../../assets/icon-chronology.svg"
-
+import img1 from "../../assets/icon-pin.svg"
+import img2 from "../../assets/icon-phrygian-cap.svg"
+import img3 from "../../assets/icon-chronology.svg"
+import imgappli from "../../assets/applicationfooter.png"
+import playstore from "../../assets/google-play-fr.png"
+import appstore from "../../assets/app-store.svg"
 import "./navbar.css"
 import { RxCross2 } from "react-icons/rx";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { BiLogoFacebook } from "react-icons/bi";
+
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { AiFillYoutube, AiOutlineSearch, AiOutlineInstagram } from "react-icons/ai";
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
@@ -21,27 +27,27 @@ const Navbar = () => {
             id: "1",
             name: "Découvrir",
             text1: "16 quartiers, 121 points d'intérêt",
-            img:img1,
+            img: img1,
             link: "/decouvrir"
         },
         {
             id: "2",
             name: "Personnages",
             text1: "Les figures de la Révolution",
-            img:img2,
+            img: img2,
             link: "/personnages"
         },
         {
             id: "3",
             name: "Chronologie",
             text1: "Petit rappel temporel",
-            img:img3,
+            img: img3,
             link: "/chronologie"
         },
         {
             id: "4",
             name: " À propos",
-            
+
             link: "/a-propos"
         },
         {
@@ -95,7 +101,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='main-header-mob mb-3 flex  justify-between md:hidden'>
+                <div className={`main-header-mob mb-3 flex  ${open ? "  fixed w-full " : " "} justify-between md:hidden`}>
                     <div className='flex text-white pt-2'>
                         <div onClick={() => { setOpen(!open); }}>
                             <RxHamburgerMenu size={30} className={`${open ? "hidden" : "cursor-pointer ml-2 inline-flex"}`} />
@@ -106,29 +112,56 @@ const Navbar = () => {
                     <div className='flex'>
                         <a href="/Acceuil" className='cursor-pointer flex'>
                             <img className="w-24 " src={logo3} alt="" title='' loading='eager' />
-                            <div className='separator'></div>
-                            <img className="w-32 " src={logo4} alt="" title='' loading='eager' />
+                            <div className='separatormob'></div>
+                            <img className="w-24" src={logo4} alt="" title='' loading='eager' />
                         </a>
                     </div>
                     <div className='flex text-white pt-2'>
-                        f
+                        <AiOutlineSearch size={30} className="ml-2 text-white inline-flex cursor-pointer" />
                     </div>
                 </div>
-                <ul className={`md:hidden  duration-500 ${open ? "  w-full  anvanimmob selected   " : " w-full anvanimob"}`}>
-                    {menu.slice(0,3).map((menus) => (
+                <ul className={`md:hidden  duration-500 ${open ? "  w-full  anvanimmob selected fixed  " : " w-full anvanimob"}`}>
+                    {menu.slice(0, 3).map((menus) => (
                         <li className='py-3 flex px-6'>
-                            <img src={menus.img} className="img-menu"/>
+                            <img src={menus.img} className="img-menu" />
                             <a key={menus.name} className={`text-global pl-3 text-[15px]`} href={menus.link}> <p className='font-bold'>{menus.name}</p> <p className='text-rouge_fonce'>{menus.text1}</p> </a>
                         </li>
 
                     ))}
-                 <hr/>
-                     {menu.slice(3,4).map((menus) => (
-                    <li className='py-3 flex px-6'>
+                    {menu.slice(3, 4).map((menus) => (
+                        <li className='py-3 flex px-6'>
                             <a key={menus.name} className={`text-global pl-3 text-[19px]`} href={menus.link}> <p className='font-bold'>{menus.name}</p> <p className='text-rouge_fonce'>{menus.text1}</p> </a>
                         </li>
-                     ))}
-                     </ul>
+                    ))}
+                    <div className='row'>
+                        <div className='col'>
+                            <div className='dl-spp'>
+
+                                <a href='#'>
+                                    <img src={appstore} loading="lazy" alt="télécharger l'application sur l'app store" />
+                                </a>
+                                <a href='#'>
+                                    <img src={playstore} loading="lazy" alt="télécharger l'application sur le google store" />
+                                </a>
+
+                            </div>
+                        </div>
+                        <div className='col dl-ap'>
+                            <img src={imgappli} loading="lazy" alt="télécharger l'application" />
+                        </div>
+
+
+                        <div className=' logonav'>
+                            <div className='mx-3'><a  href='#'><BiLogoFacebook size={20} /></a></div>
+                           <div className='mx-3'> <a  href='#'><AiFillYoutube size={20} /></a></div>
+                          <div className='mx-3'>  <a  href='#'><AiOutlineInstagram size={20} /></a></div>
+                        </div>
+
+                    </div>
+
+                </ul>
+
+
 
 
             </nav>

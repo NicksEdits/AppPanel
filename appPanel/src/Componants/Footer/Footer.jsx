@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className='row'>
 
                     <div className='col'>
-                        <div className='flex '>
+                        <div className='block md:flex '>
                             <div className='col'>
                                 <div className='footer-box'>
                                     <div className='row'>
@@ -73,7 +73,7 @@ const Footer = () => {
                             </div>
                             </div>
                         </div>
-                        <div className="  md:min-h-fit  left-[1000%]   w-full flex items-center ">
+                        <div className="  md:min-h-fit  left-[1000%]  hidden md:flex w-full  items-center ">
                             <ul className="  footer-link text-[11px] text-white gap-16 pt-12 pb-12">
                                 <li>
                                     <a href="/Acceuil" className='cursor-pointer flex '>
@@ -91,7 +91,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='col'>
+                    <div className='col app'>
                         <div className='row'>
                             <div className='col'>
                                 <img src={imgappli} loading="lazy" alt="télécharger l'application" />
@@ -99,7 +99,7 @@ const Footer = () => {
 
                             <div className='col'>
                                 <div className='dl-app'>
-                                    <p>Télécharger l'application !</p>
+                                    <p className='text-white'>Télécharger l'application !</p>
                                     <a href='#'>
                                         <img src={appstore} loading="lazy" alt="télécharger l'application sur l'app store" />
                                     </a>
@@ -109,6 +109,23 @@ const Footer = () => {
 
                                 </div>
                             </div>
+                            <div className="  md:min-h-fit  left-[1000%]  block md:hidden w-full  items-center ">
+                            <ul className=" text-[11px] text-white  pt-12 pb-12">
+                                <li>
+                                    <a href="/Acceuil" className='cursor-pointer flex '>
+                                        <img className="w-24 " src={logo2} alt="Logo Paris " title='' loading='lazy' />
+                                        <div className='separator'></div>
+                                        <img className="w-32 " src={logo1} alt=" Logo Parcours révolution" title='' loading='lazy' />
+                                    </a></li>
+                                {menu.map((menus) => (
+
+                                    <li>
+                                        <a key={menus.name} id={menus.name} className="py-3" href={menus.link}>{menus.name}</a>
+                                    </li>
+
+                                ))}
+                            </ul>
+                        </div>
                         </div>
                     </div>
                 </div>
