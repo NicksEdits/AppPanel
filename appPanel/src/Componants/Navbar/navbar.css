@@ -70,7 +70,7 @@
     transition: 1s cubic-bezier(0.76, 0, 0.24, 1) 0s;
     position: absolute;
     top: 60px;
-    height: 94%;
+    height: calc(100% - 60px);
     color: white !important;
     z-index: 4;
     background: url(../../assets/bottom-left-orange-diagonal.svg) no-repeat bottom;
